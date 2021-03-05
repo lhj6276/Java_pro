@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        #wrap {
+            width: 50%;
+            height: 400px;
+            margin: 0 auto;
+            border-radius: 20px;
+            border: 1px solid #f00;
+        }
+
+        .intro {
+            width: 33%;
+            height: 100%;
+            border-radius: 20px;
+            background: #eee;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            left: 0;
+            transition: all 1s;
+            z-index: 100;
+            animation-name: size;
+            animation-iteration-count: infinite;
+        }
+/* 
+        @keyframes size{
+            0%{
+                width: 33%;
+                height: 100%;
+            }
+            50%{
+                width: 70%;
+                height: 100%;
+            }
+            100%{
+                width: 33%;
+                height: 100%;
+            }
+        } */
+
+        .logo {
+            width: 200px;
+            height: 100px;
+            padding: 20px 0 0 20px;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        form {
+            width: 65%;
+            height: 100%;
+            /* background: lightcoral; */
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            right: 0;
+            transition: all 1.5s;
+        }
+
+        form .none {
+            display: block;
+        }
+
+        
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var login = $('.login');
+            var join = $('.join');
+            var title = $('.title');
+            var main_title = $('.main_title');
+            var none = $('.none');
+
+            login.click(function () {
+                var intro = $('.intro');
+                var form = $('form');
+                if($(this).hasClass('on')){
+                    intro.css({ 'left': '67%' });
+                    title.text('Hello');
+                    form.css({ 'right': '34%' });
+                    main_title.text('LOGIN');
+
+                    none.css({ 'display': 'none' });
+                    login.val('SIGN UP').removeClass('on');
+                    join.val('SIGN IN');
+
+                    // $('.login').removeClass('on');
+                }else{
+                    intro.css({ 'left': 0 });
+                    title.text('Welcome');
+                    form.css({'right':0});
+                    main_title.text('JOIN');
+                    none.css({'display':'block'});
+                    login.val('SIGN IN').addClass('on');
+                    join.val('SIGN UP');
+                }
+            });
+
+
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div class="intro">
+            <h1 class="logo"><img src="images/yankeecandle_logo_redesign.png" alt=""></h1>
+            <h1 class="title">Welcome</h1>
+            <p>본문에 들어갈 내용을 입력하세요.</p>
+            <input type="button" value="SIGN IN" class="login on">
+            <!-- <span class="login">SIGN IN</span> -->
+        </div>
+        <form action="">
+            <h1 class="main_title">JOIN</h1>
+            <ul class="social">
+                <li><a href="">아이콘</a></li>
+                <li><a href="">아이콘</a></li>
+                <li><a href="">아이콘</a></li>
+            </ul>
+            <p>본문에 들어갈 내용을 입력하세요.</p>
+            <ul class="text_box">
+                <li><input type="text" placeholder="Name" class="none"></li>
+                <li><input type="text" placeholder="Id"></li>
+                <li><input type="password" placeholder="Password"></li>
+                <li><input type="email" placeholder="Email" class="none"></li>
+                <li><input type="button" value="SIGN UP" class="join"></li>
+            </ul>
+        </form>
+    </div>
+
+</body>
+
+</html>

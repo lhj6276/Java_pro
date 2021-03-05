@@ -1,0 +1,727 @@
+
+#wrap{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+
+/* header */
+header{
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+    margin-bottom: 100px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+header #head_wrap{
+    width: 100%;
+    height: 500px;
+}
+header video{
+position: absolute;
+top: 0px;
+left: 0px;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -1;
+overflow: hidden;
+}
+
+header .logo{
+    margin-bottom: 30px;
+}
+header nav ul li{
+    display:inline-block;
+    width: 200px;
+}
+header nav ul li a{
+    font-size: 20px;
+    color: #fff;
+}
+header .bg{
+    background-color: rgba(255,255,255,1);
+    width: 100%;
+    height: 470px;
+    position: absolute;
+    top: -700px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+    padding: 50px 0;
+}
+header .bg .main_menu > li{
+    display: inline-block;
+    width: 200px;
+    height: 338px;
+}
+header .bg ul li a{
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+header .bg ul li a:hover{
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+header .bg ul li .sub_menu{
+    margin-top: 30px;
+}
+header .bg ul li .sub_menu li{
+    display:block;
+    padding: 10px 0;
+}
+header .bg ul li .sub_menu li a{
+    text-transform: none;
+    font-weight: normal;
+}
+
+header .side_bar{
+    display: none;
+}
+header .side_bar input[id="side_btn"]{
+    display:none;
+}
+header .side_bar input[id="side_btn"] + label{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    top: 10px;
+    right: 10px;
+}
+header .side_bar input[id="side_btn"] + label span{
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display:block;
+    position: absolute;
+    transition: all .3s;
+    z-index: 100;
+}
+
+header .side_bar input[id="side_btn"]:checked + label span{
+    background: #333;
+}
+header .side_bar input[id="side_btn"] + label span:nth-child(1){
+    top: 0;
+}
+header .side_bar input[id="side_btn"] + label span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+header .side_bar input[id="side_btn"] + label span:nth-child(3){
+    bottom: 0;
+}
+header .side_bar input[id="side_btn"]:checked + label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+header .side_bar input[id="side_btn"]:checked + label span:nth-child(2){
+    opacity: 0;
+}
+header .side_bar input[id="side_btn"]:checked + label span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+header .side_bar input[id="side_btn"] + label + .side_navi{
+    background:#fff;
+    color: #333;
+    text-align: right;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    transition: all .5s;
+    z-index: 99;
+}
+header .side_bar input[id="side_btn"]:checked + label + .side_navi{
+    right: 0;
+}
+header .side_bar .side_navi ul{
+    width: 250px;
+    height: 300px;
+    margin: 50px auto;
+}
+header .side_bar .side_navi ul li{
+    line-height: 30px;
+    position: relative;
+}
+header .side_bar .side_navi > ul > li > a{
+    font-weight: bold;
+}
+header .side_bar .side_navi ul li a:hover{
+    border-bottom: 2px solid #333;
+}
+
+header .side_bar .side_navi ul li .side_submenu{
+    height: 100%;
+    margin: 10px auto;
+    display: none;
+}
+
+header .side_bar input[id="side_btn"] + label + .side_navi ~ label .side_bg{
+    background-color: rgba(255,255,255,0.3);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: all .5s;
+}
+
+header .side_bar input[id="side_btn"]:checked + label + .side_navi ~ label .side_bg{
+    right: 0;
+    z-index: 98;
+}
+
+
+/*section #aboutus*/
+
+#aboutus{
+    width: 100%;
+    height: 450px;
+}
+#aboutus .sec_title{
+    margin-bottom: 50px;
+}
+#aboutus ul{
+    text-align: center;
+}
+#aboutus ul li{
+    display:inline-block;
+    padding: 0 50px;
+}
+.circle_box img{
+    border:1px dashed #666;
+    border-radius: 50%;
+    padding: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+/*brand*/
+#brand{
+    background: url(../images/brand_bg.jpg) no-repeat fixed center/cover;
+    width: 100%;
+    height: 550px;
+    margin-bottom: 100px;
+}
+#brand .white_bg{
+    background-color: rgba(255,255,255,0.3);
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    transform: translateY(50%);
+}
+#brand .white_bg h3{
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+#brand .white_bg p{
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+#brand .white_bg .more{
+    border:1px solid #333;
+    outline: none;
+    background: none;
+    padding: 5px 30px;
+    transition: ease-in 0.5s;
+    cursor: pointer;
+}
+#brand .white_bg .more:hover{
+    background: #333;
+    color: #fff;
+}
+
+
+
+/*product*/
+#product{
+    width: 100%;
+    margin-bottom: 150px;
+}
+#product .sec_title{
+    margin-bottom: 30px;
+}
+
+
+.slick-container{
+    width: 800px;
+    margin: 0 auto;
+    
+}
+.slick-container .item{
+    text-align: center;
+    position: relative;
+}
+.slick-container .item img{
+    display: inline-block;
+    width: 200px;
+}
+.slick-container .item .over_img{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all ease 0.5s;
+}
+.slick-container .item:hover .over_img{
+    opacity: 1;
+}
+.slick-prev, .slick-next{
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    top: 40%;
+}
+
+.slick-container .item p{
+    padding-top: 10px;
+    font-size: 14px;
+    color: #000;
+}
+
+#product .btn .left_btn, #product .btn .right_btn{
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 100px;
+    border:1px solid #666;
+    border-radius: 50%;
+    transition: ease-in 0.5s;
+    font-size: 25px;
+}
+#product .btn .left_btn{
+    left: 50px;
+}
+#product .btn .right_btn{
+    right: 50px;
+}
+
+#product .btn .left_btn:hover, .right_btn:hover{
+    background: #333;
+    color: #fff;
+}
+#product .pro_txt{
+    text-align: center;
+}
+#product .pro_txt li{
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    padding: 0 30px;
+}
+#product .pro_txt li p{
+    font-size: 12px;
+}
+
+
+
+/*review*/
+#review{
+    width: 100%;
+    height: 600px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#review .bg{
+    background: #f5d4ca;
+    width: 100%;
+    height: 380px;
+}
+#review .sec_title{
+    padding:50px 0;
+    margin: 0;
+}
+#review .review_box{
+    width: 290px;
+    height: 390px;
+    background: #fff;
+    box-shadow: 2px 2px 5px #999;
+    display:inline-block;
+    margin:0 10px;
+    transition: all ease 0.5s;
+    position: relative;
+}
+#review .review_more{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.5);
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: ease .5s;
+    z-index: 100;
+}
+#review .review_box:hover .review_more{
+    width: 100%;
+}
+#review .review_box .review_more h5{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    right: 10px;
+}
+#review .review_box > h5{
+    margin: 20px 0;
+}
+#review .review_box h5:hover{
+    cursor: pointer;
+}
+
+#review .review_box .review_img{
+    margin: 10px 0;
+    width: 200px;
+    height: 210px;
+}
+#review .review_box .review_img:hover{
+    cursor: pointer;
+}
+
+#review .review_box .heart{
+    width: 20px;
+    height: 18px;
+    position: absolute;
+    top: 63%;
+    right: 17%;
+    transition: all ease 0.5s;
+}
+#review .review_box .review_img:hover .heart{
+    opacity: 1;
+    border: 1px solid #f00;
+}
+#review .review_box p{
+    font-size: 12px;
+    text-align: left;
+    line-height: 20px;
+    margin: 0 auto;
+    display:inline-block;
+}
+#review .review_box p .blue{
+    font-size: 14px;
+    color: #464669;
+}
+
+
+/*footer*/
+footer{
+    width: 100%;
+    height: 150px;
+    padding-top: 50px;
+    background: #252525;
+}
+footer .logo{
+    float: left;
+    padding-right: 50px;
+}
+footer .info{
+    float: left;
+}
+footer .info li p{
+    color: #ccc;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+footer .social_icon{
+    float: right;
+    height: 150px;
+}
+footer .social_icon li{
+    padding: 0 8px;
+    display: inline-block;
+    
+}
+footer .social_icon li img{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:768px){
+    #wrap{
+        width: 768px;
+    }
+
+    /*header-768*/
+    header{
+        width: 768px;
+        height: 450px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    header #head_wrap{
+        width: 768px;
+        height:450px;
+        position: relative;
+        
+    }
+    header video{
+        position: absolute;
+        top: 0;
+        left: 0;  
+        height: 450px;
+        z-index: -100;
+    }
+    header .logo{
+        margin: 0;
+        padding: 10px 0;
+    }
+    header .main_menu{
+        display: none;
+    }
+    header nav{
+        display: none;
+    }
+    header .bg{
+        display: none;
+    }
+
+    header .side_bar{
+        display: block;
+    }
+
+
+    
+
+    /*aboutus-768*/
+    #aboutus{
+        height: 100%;
+        margin: 20px auto;
+    }
+    #aboutus .inner{
+        width: 768px;
+    }
+    #aboutus .sec_title{
+        margin:30px auto;
+    }
+    #aboutus ul li{
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+
+    /*brand-768*/
+    #brand{
+        margin: 30px auto;
+    }
+
+    /*product-768*/
+    #product{
+        margin: 30px auto;
+    }
+    #product .inner{
+        width: 768px;
+    }
+    #product .sec_title{
+        margin: 30px auto;
+    }
+    #product .slick-container{
+        width: 600px;
+    }
+
+
+    /*review-768*/
+    #review{
+        height: 1000px;
+    }
+    #review .inner{
+        width: 768px;
+    }
+    #review .sec_title{
+        margin: 30px auto;
+        padding: 30px 0;
+    }
+    #review .review_box{
+        margin: 10px auto;
+    }
+
+
+
+    /*footer-768*/
+    footer{
+        text-align: center;
+        padding-top: 60px;
+        height:400px;
+
+    }
+    footer .inner{
+        width: 768px;
+    }
+    footer .logo{
+        clear: left;
+        padding-bottom: 20px;
+        width: 768px;
+        height: 100px;
+    }
+    footer .info{
+        clear: left;
+        width: 768px;
+        height: 150px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    footer .social_icon{
+        width: 768px;
+        height: 150px;
+        text-align: center;
+        float: none;
+    }
+    footer .social_icon li{
+        display: inline-block;
+        line-height: 150px;
+    }
+}
+
+
+/*480px*/
+@media screen and (max-width:480px){
+
+    #wrap{
+        width: 480px;
+    }
+
+    /*header-480*/
+    header{
+        width: 480px;
+        height: 300px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    header #head_wrap{
+        width: 480px;
+        height:300px;
+        position: relative;
+        
+    }
+    header video{
+        position: absolute;
+        top: 0;
+        left: 0;  
+        height: 300px;
+        z-index: -100;
+    }
+    header .logo{
+        margin: 0;
+        padding: 10px 0;
+    }
+    header .main_menu{
+        display: none;
+    }
+    header nav{
+        display: none;
+    }
+    header .bg{
+        display: none;
+    }
+
+    header .side_bar{
+        display: block;
+    }
+
+
+    /*aboutus-480*/
+    #aboutus{
+        height: 100%;
+        margin: 20px auto;
+    }
+    #aboutus .inner{
+        width: 480px;
+    }
+    #aboutus .sec_title{
+        margin:30px auto;
+    }
+    #aboutus ul li{
+        margin: 20px 0;
+        display: block;
+    }
+
+    /*brand-480*/
+    #brand{
+        margin: 30px auto;
+    }
+
+    /*product-480*/
+    #product{
+        margin: 30px auto;
+    }
+    #product .inner{
+        width: 480px;
+    }
+    #product .sec_title{
+        margin: 30px auto;
+    }
+    #product .slick-container{
+        width: 300px;
+    }
+   
+
+    /*review-480*/
+    #review{
+        height: 1850px;
+    }
+    #review .inner{
+        width: 480px;
+    }
+    #review .sec_title{
+        margin: 30px auto;
+    }
+    #review .review_box{
+        margin: 10px auto;
+    }
+
+
+    /*footer-480*/
+    footer{
+        text-align: center;
+        padding-top: 60px;
+        height:400px;
+
+    }
+    footer .inner{
+        width: 480px;
+    }
+    footer .logo{
+        clear: left;
+        padding-bottom: 20px;
+        width: 480px;
+        height: 100px;
+    }
+    footer .info{
+        clear: left;
+        width: 480px;
+        height: 150px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    footer .social_icon{
+        width: 480px;
+        height: 150px;
+        text-align: center;
+    }
+    footer .social_icon li{
+        display: inline-block;
+        line-height: 150px;
+    }
+}   
